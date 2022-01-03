@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char menu [1][99]= {"1. Laporan laba rugi bentuk stafel - 2. Laporan Perubahan ekuitas - 3. Laporan Posisi keuangan\n"};
+    int sel,aa,bb,cc,dd,ee,ff,gg,hh,ii,jj,kk,ll,mm,nn,oo,pp,qq;
+
+
+    puts   ("\t\t LAPORAN-LAPORAN KEUANGAN BY ARKA");
+    puts   ("");
+    puts   ("");
+    puts   ("");
+    puts   ("Sebuah perusahaan bernama Bwa - bwa corporation sedang melakukan sebuah transaksi dengan persamaan dasar akuntansi");
+    puts   ("Berikut adalah Laporan keuangannya : \n");
+    for (int i=0;i<1;i++)
+    {
+      printf ("%s",menu[i]);
+    }
+    puts("====================================================================\n");
+    printf ("MASUKKAN KATA UNTUK MEMULAI PERHITUNGAN :  ");
+    scanf  ("%d", &sel);
+    printf ("=================================================================\n");
+
+
+
+    if (sel== 1){
+       puts("\t\t    Bwa-bwa corp.");
+       puts("\t\t  LAPORAN LABA RUGI");
+       puts("\t\tPeriode 31 Desember 2021");
+       printf("penghasilan travel                    :Rp.\t\t ");
+       scanf("%d", &aa);
+       printf("Beban perlengkapan                    :Rp. ");
+       scanf("%d", &bb);
+       printf("Beban gaji                            :Rp. ");
+       scanf("%d", &cc);
+       printf("Beban sewa                            :Rp. ");
+       scanf("%d", &dd);
+       printf ("=================================================================\n");
+       ee = bb + cc + dd;
+       printf("Jumlah beban usaha                    :Rp.\t\t( %d)\n", ee);
+       printf ("=================================================================\n");
+       ff = aa - ee;
+       printf("Laba bersih sebelum pajak penghasilan :Rp.\t\t %d\n", ff);
+
+    printf ("==================================================================\n");
+    puts("\t\t    Bwa-Bwa corp.");
+    puts("\t\tLLAPORAN PERUBAHAN EKUITAS");
+    puts("\t\t Periode 31 Desember 2021");
+
+    printf("modal 2 Desember 2021                    :Rp.\t\t ");
+    scanf("%d", &gg);
+    printf("laba usaha                               :Rp.%d\n",ff);//dari laba bersih sebelum pajak penghasilan di baris 44
+    printf("Kenaikan modal                           :Rp.\t\t %d\n",ff);
+    printf ("=================================================================\n");
+    hh = gg + ff;
+    printf("Total modal 31 Desember 2021             :Rp.\t\t %d\n",hh);
+
+    printf ("==================================================================\n");
+    puts("\t\t   Bwa-Bwa corp.");
+    puts("\t\t  LAPORAN NERACA");
+    puts("\t\tPeriode 31 Desember 2021");
+
+    printf("Aktiva lancar :\n");
+    printf("=================================================================\n");
+    printf("Kas                                      :Rp.\t\t ");
+    scanf("%d", &ii);
+    printf("Piutang dagang                           :Rp.\t\t ");
+    scanf("%d", &jj);
+    printf("Sewa dibayar dimuka                      :Rp.\t\t ");
+    scanf("%d", &kk);
+    printf("Perlengkapan                             :Rp.\t\t ");
+    scanf("%d", &ll);
+    printf("=================================================================\n");
+    mm = ii + jj + kk + ll;
+    printf("TOTAL                                    :Rp.\t\t %d \n",mm);
+    printf("=================================================================\n");
+    printf("Aktiva tetap  :\n");
+    printf("=================================================================\n");
+    printf("Peralatan                                :Rp. ");
+    scanf("%d", &nn);
+    printf("Jumlah peralatan                         :Rp.\t\t %d\n",nn);
+    printf("=================================================================\n");
+    oo = nn + mm;
+    printf("Total keseluruhan                        :Rp.\t\t %d\n",oo);
+    printf("=================================================================\n");
+    printf("Pasiva : \n");
+    printf("=================================================================\n");
+    printf("Utang jangka pendek : \n");
+    printf("utang dagang                             :Rp.\t\t ");
+    scanf("%d", &pp);
+    printf("=================================================================\n");
+    printf("Modal :\n");
+    printf("Modal                                    :Rp.\t\t %d\n",hh);
+    qq = hh + pp;
+    printf("TOTAL                                    :Rp.\t\t %d \n",qq);
+    printf("=================================================================\n");
+    printf("\t\t\tREKAPITULASI\n");
+    printf("=================================================================\n");
+    printf("TOTAL DI AKTIVA TETAP                    :Rp.%d\n",oo);
+    printf("TOTAL DI PASIVA                          :Rp.%d\n",qq);
+    printf("=================================================================\n");
+}
+    else if (sel>1){
+    printf("ERROR CODE : NOT FOUND \n");
+    }
+
+
+
+return 0;
+
+}
